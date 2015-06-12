@@ -1,0 +1,30 @@
+<link rel=import href=../polymer/polymer.html><link rel=import href=../paper-input/paper-input-behavior.html><link rel=import href=../paper-input/paper-input-container.html><link rel=import href=../paper-input/paper-input-error.html><link rel=import href=../iron-input/iron-input.html><link rel=import href=../iron-form-element-behavior/iron-form-element-behavior.html><link rel=import href=email-validator.html><dom-module id=gold-email-input><style>
+  :host {
+    display: block;
+  }
+  </style><template><paper-input-container id=container auto-validate=[[autoValidate]] attr-for-value=bind-value><label hidden$=[[!label]]>[[label]]</label><email-validator></email-validator><input is=iron-input id=input required$=[[required]] aria-labelledby$=[[_ariaLabelledBy]] aria-describedby$=[[_ariaDescribedBy]] validator=email-validator bind-value={{value}} autocomplete=email name$=[[name]]><template is=dom-if if=[[errorMessage]]><paper-input-error id=error>[[errorMessage]]</paper-input-error></template></paper-input-container></template></dom-module><script>
+(function() {
+  Polymer({
+
+    is: 'gold-email-input',
+
+    behaviors: [
+      Polymer.PaperInputBehavior,
+      Polymer.IronFormElementBehavior
+    ],
+
+    properties: {
+      /**
+       * The label for this input.
+       */
+      label: {
+        type: String,
+        value: "Email"
+      }
+    }
+
+  })
+
+})();
+
+</script>

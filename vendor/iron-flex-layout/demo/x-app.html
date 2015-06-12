@@ -1,0 +1,59 @@
+<link rel=import href=../iron-flex-layout.html><dom-module id=x-app><style>
+
+    :host {
+      @apply(--layout-horizontal);
+    }
+
+    [nav] {
+      width: 300px;
+      @apply(--layout-vertical);
+      background-color: #ddd;
+    }
+
+    [item] {
+      height: 60px;
+      padding-left: 16px;
+      @apply(--layout-horizontal --layout-center);
+      border-bottom: 1px solid #bbb;
+    }
+
+    [main] {
+      @apply(--layout-flex);
+      @apply(--layout-vertical);
+    }
+
+    [header] {
+      height: 60px;
+      background-color: #ccc;
+      padding: 0 16px;
+      @apply(--layout-horizontal --layout-center);
+    }
+
+    [tool] {
+      @apply(--layout-inline);
+    }
+
+    [flex] {
+      @apply(--layout-flex);
+    }
+
+    [content] {
+      @apply(--layout-flex);
+      overflow: auto;
+    }
+
+    [card] {
+      height: 300px;
+      width: 300px;
+      margin: 16px auto;
+      background-color: #eee;
+      @apply(--layout-vertical --layout-center-center);
+    }
+
+  </style><template><div><div><div>ITEM 1</div><div>ITEM 2</div><div>ITEM 3</div><div>ITEM 4</div><div>ITEM 5</div></div></div><div><div><div>Foo</div><div></div><div>Bar</div></div><div><div>CARD 1</div><div>CARD 2</div><div>CARD 3</div><div>CARD 4</div><div>CARD 5</div></div></div></template></dom-module><script>
+
+  Polymer({
+    is: 'x-app'
+  });
+
+</script>

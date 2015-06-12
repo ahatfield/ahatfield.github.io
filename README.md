@@ -1,3 +1,0 @@
-# ahatfield.github.io
-
-test
